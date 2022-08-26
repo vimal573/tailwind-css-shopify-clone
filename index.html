@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -36,7 +36,7 @@
   </head>
   <body class="2xl:container mx-auto font-[Inter] overflow-x-hidden">
     <!-- Header Starts -->
-    <header class="bg-[#fbf7ed] h-screen">
+    <header class="bg-[#fbf7ed] lg:h-screen">
       <!-- Navbar starts -->
       <nav class="h-20 flex items-center justify-between px-10">
         <!-- Logo -->
@@ -45,7 +45,7 @@
         </div>
 
         <!-- midnav -->
-        <div class="mr-auto">
+        <div class="hidden lg:block mr-auto">
           <ul
             class="flex items-center gap-8 text-[#42474c] font-medium [&>li>a>i]:ml-1.5"
           >
@@ -73,7 +73,7 @@
         </div>
 
         <!-- Endnav -->
-        <div>
+        <div class="hidden lg:block">
           <ul
             class="flex items-center gap-8 text-[#42474c] font-medium [&>li>a>i]:ml-1.5"
           >
@@ -97,38 +97,46 @@
             </li>
           </ul>
         </div>
+
+        <!-- mobile nav -->
+        <div
+          class="flex lg:hidden items-center gap-8 text-[#42474c] font-medium"
+        >
+          <a href="#" class="hover:text-[#212326]">Log in</a>
+          <span><i class="fa-solid fa-bars text-[20px]"></i></span>
+        </div>
       </nav>
 
       <!-- Hero Section -->
 
-      <div class="grid grid-cols-2 justify-between items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-center">
         <!-- Left Section -->
-        <div class="pl-10">
+        <div class="px-10 md:pl-10 py-6 lg:py-0">
           <!-- Hero Text-box -->
 
           <h1
-            class="text-5xl leading-snug tracking-tighter text-[#004c3f] font-bold mb-6"
+            class="text-4xl lg:text-5xl leading-snug tracking-tighter text-[#004c3f] font-bold mb-6 max-w-[18ch]"
           >
             The easiest way to sell online in india
           </h1>
-          <p class="text-lg text-[#6b7177] w-[500px] mb-6">
+          <p class="text-base lg:text-lg text-[#6b7177] sm:w-[500px] mb-6">
             Try one of the most powerful platforms on the market for free. No
             technical knowledge needed.
           </p>
           <!-- Hero input form -->
-          <div class="flex gap-3 items-center mb-6">
+          <div class="flex flex-col sm:flex-row gap-3 sm:items-center mb-6">
             <input
-              class="w-[60%] py-2.5 px-2 outline-none rounded shadow-[0_0_0_1px_#6b7177] focus:shadow-[0_0_0_2px_#008060]"
+              class="sm:w-[75%] md:w-[40%] lg:w-[60%] py-2.5 px-2 outline-none rounded shadow-[0_0_0_1px_#6b7177] focus:shadow-[0_0_0_2px_#008060]"
               type="text"
               placeholder="Enter your email here"
             />
             <a
               href="#"
-              class="text-sm text-white font-bold bg-[#008060] rounded py-3 px-6 shadow-md hover:bg-[#004c3f] hover:shadow-xl hover:transition-all"
+              class="text-sm text-white font-bold bg-[#008060] rounded py-3 px-6 shadow-md hover:bg-[#004c3f] hover:shadow-xl hover:transition-all text-center"
               >Try for Free</a
             >
           </div>
-          <p class="text-xs text-[#42474c] w-[500px]">
+          <p class="text-xs text-[#42474c] md:w-[500px]">
             Try Shopify free for 14 days, no credit card required. By entering
             your email, you agree to receive marketing emails from Shopify.
           </p>
@@ -136,14 +144,14 @@
 
         <!-- Right Side -->
 
-        <div class="relative left-[65px] -top-3.5">
+        <div class="relative lg:left-[65px] lg:-top-3.5">
           <div
             class="absolute h-[30%] w-full bottom-0 bg-gradient-to-t from-[#000000a6]"
           ></div>
           <img
             src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/hero/in-hero-product-large-bce22ad495460b9f4ecb3ba9ae001c159106992815d73339fd27436dd16dcf4c.jpg?quality=50"
             alt="Hero image"
-            class="w-[98%]"
+            class="lg:w-[98%]"
           />
         </div>
       </div>
@@ -151,8 +159,8 @@
 
     <main>
       <!-- Buisness example section -->
-      <section class="bg-[#004c3f] text-white px-10 py-24">
-        <h2 class="text-4xl mb-4">Bring your business online</h2>
+      <section class="bg-[#004c3f] text-white px-10 py-20 md:py-24">
+        <h2 class="text-3xl lg:text-4xl mb-4">Bring your business online</h2>
         <p class="mb-4">
           Create an ecommerce website backed by powerful tools that help you
           find customers, drive sales, and manage your day-to-day.
@@ -164,7 +172,9 @@
         ></a>
 
         <!-- Exapmles cards -->
-        <div class="grid grid-cols-5 justify-between items-center gap-5 mt-12">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-between items-center gap-5 sm:gap-8 md:gap-5 mt-12"
+        >
           <!-- Example card 1 -->
           <div>
             <img
@@ -238,7 +248,7 @@
           </div>
 
           <!-- Example card 5 -->
-          <div>
+          <div class="hidden lg:block">
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/bunaai/home-example-large-77e630ba8c116ad0d5a6f359951433dccb0e84b75ee7f23545fe2ff9b4921148.jpg?quality=50"
               alt=""
@@ -257,10 +267,14 @@
         </div>
 
         <!-- Best Paths -->
-        <div class="mt-32">
-          <h2 class="text-2xl mb-20">Take the best path forward</h2>
+        <div class="mt-20 lg:mt-32">
+          <h2 class="text-xl lg:text-2xl mb-12 lg:mb-20">
+            Take the best path forward
+          </h2>
 
-          <div class="grid grid-cols-4 gap-5 items-center">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 lg:gap-5 items-center md:w-full sm:w-[68%]"
+          >
             <!-- Path -->
             <div>
               <svg
@@ -277,7 +291,9 @@
                   fill="#c1f0d0"
                 />
               </svg>
-              <h3 class="text-lg font-medium mb-2">Start an online business</h3>
+              <h3 class="text-base lg:text-lg font-medium mb-2">
+                Start an online business
+              </h3>
               <p class="text-sm">
                 Create a business, whether you’ve got a fresh idea or are
                 looking for a new way to make money.
@@ -300,7 +316,7 @@
                   fill="#c1f0d0"
                 />
               </svg>
-              <h3 class="text-lg font-medium mb-2">
+              <h3 class="text-base lg:text-lg font-medium mb-2">
                 Move your business online
               </h3>
               <p class="text-sm">
@@ -321,7 +337,9 @@
                   d="M42.5 11.82v28a1.5 1.5 0 01-3 0v-27L23 5.46 6.5 12.8v27a1.5 1.5 0 01-3 0v-28a1.5 1.5 0 01.89-1.37l18-8a1.5 1.5 0 011.22 0l18 8a1.5 1.5 0 01.89 1.39zM32.5 28a1.5 1.5 0 00-1.5 1.5A8.48 8.48 0 0117.05 36h2.45a1.5 1.5 0 000-3h-6a1.5 1.5 0 00-1.5 1.5v6a1.5 1.5 0 003 0v-2.32a11.47 11.47 0 0019-8.68 1.5 1.5 0 00-1.5-1.5zM14 29.5A8.48 8.48 0 0127.95 23H25.5a1.5 1.5 0 000 3h6a1.5 1.5 0 001.5-1.5v-6a1.5 1.5 0 00-3 0v2.32a11.47 11.47 0 00-19 8.68 1.5 1.5 0 003 0z"
                 />
               </svg>
-              <h3 class="text-lg font-medium mb-2">Switch to Shopify</h3>
+              <h3 class="text-base lg:text-lg font-medium mb-2">
+                Switch to Shopify
+              </h3>
               <p class="text-sm">
                 Bring your business to Shopify, no matter which ecommerce
                 platform you’re currently using..
@@ -340,7 +358,9 @@
                   d="M12.5 21A6.5 6.5 0 106 14.5a6.5 6.5 0 006.5 6.5zm0-10A3.5 3.5 0 119 14.5a3.5 3.5 0 013.5-3.5zM30 21a8 8 0 10-8-8 8 8 0 008 8zm0-13a5 5 0 11-5 5 5 5 0 015-5zm13 25.5v4a1.5 1.5 0 01-3 0v-4c0-3.77-2.52-6.5-6-6.5h-7.5a6.51 6.51 0 00-6.5 6.5v4a1.5 1.5 0 01-3 0v-4a9.51 9.51 0 019.5-9.5H34c5.13 0 9 4.08 9 9.5zm-27-8a1.5 1.5 0 01-1.5 1.5h-4A5.51 5.51 0 005 32.5V36a1.5 1.5 0 01-3 0v-3.5a8.51 8.51 0 018.5-8.5h4a1.5 1.5 0 011.5 1.5z"
                 />
               </svg>
-              <h3 class="text-lg font-medium mb-2">Hire a Shopify exper</h3>
+              <h3 class="text-base lg:text-lg font-medium mb-2">
+                Hire a Shopify exper
+              </h3>
               <p class="text-sm">
                 Get set up with the help of a trusted freelancer or agency from
                 the Shopify Experts Marketplace.
@@ -351,21 +371,25 @@
       </section>
 
       <!-- Features section -->
-      <section class="text-[#6b7177] px-10 pt-24 pb-20">
-        <div class="mx-auto text-center w-[600px] mb-20">
-          <h2 class="text-4xl text-[#212326] mb-4">
+      <section
+        class="text-[#6b7177] px-10 pt-16 md:pt-20 lg:pt-24 pb-14 lg:pb-20"
+      >
+        <div class="mx-auto text-center md:w-[600px] mb-20">
+          <h2 class="text-3xl lg:text-4xl text-[#212326] mb-4">
             With you wherever you’re going
           </h2>
-          <p class="text-xl">
+          <p class="text-lg lg:text-xl">
             One platform with all the ecommerce and point of sale features you
             need to start, run, and grow your business
           </p>
         </div>
 
         <!-- Sells every where -->
-        <div class="flex justify-between items-center gap-16">
+        <div
+          class="flex flex-col-reverse lg:flex-row justify-between items-center gap-16"
+        >
           <!-- left side  -->
-          <div class="basis-1/2">
+          <div class="lg:basis-1/2">
             <video class="h-full w-full object-cover" autoplay loop muted>
               <source
                 src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/sell-animation-desktop-1b186d853b04bce6dbc12bb63bd5bc4bc1ff60cd1a06fd12f85261c8acc66d0a.mp4"
@@ -380,9 +404,11 @@
           </div>
 
           <!-- Right side -->
-          <div class="basis-1/2">
-            <h3 class="text-3xl text-[#212326] mb-5">Sell everywhere</h3>
-            <p class="w-[490px] mb-5">
+          <div class="lg:basis-1/2">
+            <h3 class="text-2xl lg:text-3xl text-[#212326] mb-5 mt-14 lg:mt-0">
+              Sell everywhere
+            </h3>
+            <p class="sm:w-[490px] mb-5">
               Use one platform to sell products to anyone, anywhere—in person
               with Point of Sale and online through your website, social media,
               and online marketplaces.
@@ -390,17 +416,21 @@
             <a
               href=""
               class="text-lg text-[#008060] font-bold [&>i]:ml-0.5 [&>i]:hover:ml-3 [&>i]:transition-all [&>i]:duration-500"
-              >Explore more examples <i class="fa-solid fa-arrow-right"></i
+              >Explore ways to sell <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
         </div>
 
         <!-- Market your buisness -->
-        <div class="flex items-center">
+        <div
+          class="flex flex-col lg:flex-row items-center gap-10 lg:gap-0 mt-14 lg:mt-0"
+        >
           <!-- left side  -->
-          <div class="basis-1/2 pl-24">
-            <h3 class="text-3xl text-[#212326] mb-5">Market your business</h3>
-            <p class="w-[490px] mb-5">
+          <div class="lg:basis-1/2 lg:pl-24">
+            <h3 class="text-2xl lg:text-3xl text-[#212326] mb-5">
+              Market your business
+            </h3>
+            <p class="sm:w-[490px] mb-5">
               Take the guesswork out of marketing with built-in tools that help
               you create, execute, and analyze digital marketing campaigns.
             </p>
@@ -413,7 +443,7 @@
           </div>
 
           <!-- Right side -->
-          <div class="basis-1/2">
+          <div class="lg:basis-1/2">
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/market-small-084eab2d72b510555838c446501d27dd7380585450efcaaa97453289b2b69c79.jpg"
               alt=""
@@ -422,9 +452,11 @@
         </div>
 
         <!-- Manage everything -->
-        <div class="flex justify-start items-center gap-10">
+        <div
+          class="flex flex-col-reverse lg:flex-row justify-start items-center gap-10 mt-14 lg:mt-0"
+        >
           <!-- left side  -->
-          <div class="w-[55%]">
+          <div class="lg:w-[55%]">
             <img
               src="https://shopify-ui.netlify.app/assets/shopify-dashboard.svg"
               alt=""
@@ -433,7 +465,7 @@
           </div>
 
           <!-- Right side -->
-          <div class="w-[35%]">
+          <div class="sm:w-[50%] lg:w-[35%]">
             <h3 class="text-3xl text-[#212326] mb-5">Manage everything</h3>
             <p class="mb-5">
               Gain the insights you need to grow—use a single dashboard to
@@ -450,19 +482,21 @@
       </section>
 
       <!-- Explore In india section -->
-      <section class="bg-[#f3fcf4] px-10 py-24">
-        <h2 class="text-3xl text-[#004c3f] mb-12">
+      <section class="bg-[#f3fcf4] px-10 py-20 lg:py-24">
+        <h2 class="text-2xl lg:text-3xl text-[#004c3f] mb-10 lg:mb-12">
           Explore more from Shopify in India
         </h2>
 
-        <div class="bg-white flex justify-between items-center">
+        <div
+          class="bg-white flex flex-col-reverse md:flex-row justify-between items-center"
+        >
           <!-- text box -->
-          <div class="p-4 pl-10">
+          <div class="basis-1/2 p-8 md:p-4 md:pl-10">
             <h3 class="text-sm text-[#212326] font-black mb-4">START</h3>
-            <h3 class="text-2xl text-[#212326] mb-5 w-[500px]">
+            <h3 class="text-xl lg:text-2xl text-[#212326] mb-5 lg:w-[500px]">
               Launch your store with the help of a Shopify Expert
             </h3>
-            <p class="text-[#42474c] w-[490px] mb-5">
+            <p class="text-[#42474c] lg:w-[490px] mb-5">
               Find hundreds of experts from India ready to help you get your
               store up and running, from choosing a theme to building a fully
               customized site.
@@ -478,17 +512,18 @@
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/card-collection/india-experts-small-432c16e7cd8ec09f3ae3aca42c58775001d5dc511e70608476ed7ee0e2d2e2c5.jpg"
               alt=""
+              class="h-full object-cover"
             />
           </div>
         </div>
       </section>
 
       <!-- Learn more section -->
-      <section class="text-[#212326] px-10 py-16">
-        <h2 class="text-3xl leading-normal w-[500px] mb-5">
+      <section class="text-[#212326] px-10 py-12 lg:py-16">
+        <h2 class="text-2xl lg:text-3xl leading-normal lg:w-[500px] mb-5">
           Empowering independent business owners everywhere
         </h2>
-        <p class="text-2xl w-[700px] leading-tight mb-8">
+        <p class="text-xl lg:text-2xl lg:w-[700px] leading-tight mb-8">
           Millions of businesses in
           <span class="font-bold"> 175 countries </span>around the world have
           made over <span class="font-bold">$496 billion</span> USD in sales
@@ -500,7 +535,7 @@
           >Learn more about Shopify<i class="fa-solid fa-arrow-right"></i
         ></a>
 
-        <div class="mt-16">
+        <div class="mt-12 lg:mt-16">
           <img
             src="https://cdn.shopify.com/shopifycloud/brochure/assets/modules/map/map-fallback-small-cc55c939983003e5218ed07f624c0e0a10c844dc57367730288845c451b35e86.png"
             alt=""
@@ -509,8 +544,8 @@
         </div>
 
         <!-- Testimonial  -->
-        <div class="flex mt-4">
-          <div class="">
+        <div class="flex flex-col md:flex-row mt-6">
+          <div class="md:w-[50%]">
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/alicia-souza/alicia-souza-testimonial@desktop-d947199e09069edaf78e332d87ba932b45805e3c91d032ba8a083a6f67ad04b5.jpg"
               alt=""
@@ -519,10 +554,10 @@
           </div>
 
           <div
-            class="text-white text-2xl font-medium bg-[#002e25] w-[50%] py-10 px-8"
+            class="text-white text-xl lg:text-2xl font-medium bg-[#002e25] md:w-[50%] py-10 px-14 md:px-6 lg:px-8"
           >
             <div
-              class="flex flex-col items-center w-[65%] text-center gap-12 mx-auto"
+              class="flex flex-col items-center lg:w-[65%] text-center gap-8 lg:gap-12 mx-auto"
             >
               <p>
                 “Shopify was my knight in shining armor when I exhausted every
@@ -541,12 +576,12 @@
         </div>
 
         <!-- Companies -->
-        <div class="mt-10 flex justify-between">
+        <div class="mt-10 flex justify-center gap-10 flex-wrap lg:flex-nowrap">
           <div>
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/logo-soup/bajaao-large-90b80d8dca23c6010844c15073c5682e366e2a7cce83c3906023254ddc0f118f.png?quality=50"
               alt=""
-              class="h-10"
+              class="w-[100px]"
             />
           </div>
 
@@ -554,7 +589,7 @@
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/logo-soup/johnjacobs-large-64648953616375e0c0cdf42f66d2dac5d5d42c1fd73c36479bbfadde18215515.png?quality=50"
               alt=""
-              class="h-10"
+              class="w-[100px]"
             />
           </div>
 
@@ -562,7 +597,7 @@
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/logo-soup/kylie-large-cc52236a0d0155a055cdcb79674ed7d09e34dad57775fdacfcf5fe35a54573fe.png?quality=50"
               alt=""
-              class="h-10"
+              class="w-[100px]"
             />
           </div>
 
@@ -570,7 +605,7 @@
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/logo-soup/nush-large-700def69c5dedebecfbd66e65596eb777f090ed413fe4bade3f8547524c9b6c0.png?quality=50"
               alt=""
-              class="h-10"
+              class="w-[100px]"
             />
           </div>
 
@@ -578,7 +613,7 @@
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/logo-soup/yogabar-large-5e1859ae4c2493c4b21db6bd0029982f0ed35a632bdb24f9bacca6d553341986.png?quality=50"
               alt=""
-              class="h-10"
+              class="w-[100px]"
             />
           </div>
 
@@ -586,7 +621,7 @@
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/logo-soup/starstruck-large-f1878004d9a8b2965ddda61f9860c542fe63c6bbd4f9b9674894f4c34ecc05ae.png?quality=50"
               alt=""
-              class="h-10"
+              class="w-[100px]"
             />
           </div>
 
@@ -594,7 +629,7 @@
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/logo-soup/mcaffeine-large-58ebe816c20a443da0ce4d32256d4b1e48ec46cae26cb7a2b0f595ea91fdd795.png?quality=50"
               alt=""
-              class="h-10"
+              class="w-[100px]"
             />
           </div>
         </div>
@@ -602,18 +637,20 @@
 
       <!-- Help Section -->
       <section class="bg-[#fbf7ed]">
-        <div class="flex justify-between">
+        <div class="flex flex-col md:flex-row justify-between">
           <!-- Left side  -->
-          <div class="pl-10 pt-16">
-            <h2 class="text-4xl text-[#212326] leading-snug w-[450px]">
+          <div class="pl-10 pt-16 pr-6">
+            <h2
+              class="text-3xl lg:text-4xl text-[#212326] leading-snug w-[450px]"
+            >
               Get the help you need, every step of the way
             </h2>
 
             <!-- Help-Cards -->
-            <div class="grid grid-cols-2 gap-y-12 mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-12 mt-10">
               <!-- card -->
-              <div class="flex flex-col gap-2 w-[300px]">
-                <h3 class="text-lg text-[#212326] font-medium">
+              <div class="flex flex-col gap-2 lg:w-[300px]">
+                <h3 class="text-base lg:text-lg text-[#212326] font-medium">
                   Shopify support
                 </h3>
                 <p class="text-[#6b7177]">
@@ -628,8 +665,8 @@
               </div>
 
               <!-- card -->
-              <div class="flex flex-col gap-2 w-[320px]">
-                <h3 class="text-lg text-[#212326] font-medium">
+              <div class="flex flex-col gap-2 lg:w-[320px]">
+                <h3 class="text-base lg:text-lg text-[#212326] font-medium">
                   Shopify App Store
                 </h3>
                 <p class="text-[#6b7177]">
@@ -646,8 +683,8 @@
               </div>
 
               <!-- card -->
-              <div class="flex flex-col gap-2 w-[350px]">
-                <h3 class="text-lg text-[#212326] font-medium">
+              <div class="flex flex-col gap-2 lg:w-[350px]">
+                <h3 class="text-base text-lg text-[#212326] font-medium">
                   Shopify Experts Marketplace
                 </h3>
                 <p class="text-[#6b7177]">
@@ -666,10 +703,11 @@
           </div>
 
           <!-- Right side -->
-          <div class="basis-1/2">
+          <div class="lg:basis-1/2 mt-10 md:mt-0">
             <img
               src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/help@desktop-9a31a38edab7cba3389c5d71eccb81ab32d24e0eeb40c8eac3568d98bc179e1e.jpg"
               alt=""
+              class="h-full"
             />
           </div>
         </div>
@@ -678,12 +716,12 @@
       <!-- Start Trial section -->
       <section class="px-10 pb-10">
         <div
-          class="flex flex-col items-center mx-auto gap-6 w-[770px] text-center pt-28 pb-16"
+          class="flex flex-col items-center mx-auto gap-4 lg:gap-6 md:w-[770px] text-center pt-16 lg:pt-28 pb-16"
         >
-          <h2 class="text-3xl text-[#212326]">
+          <h2 class="text-2xl lg:text-3xl text-[#212326]">
             Start your business journey with Shopify
           </h2>
-          <p class="text-lg text-[#6b7177]">
+          <p class="text-base lg:text-lg text-[#6b7177]">
             Try Shopify for free, and explore all the tools and services you
             need to start, run, and grow your business.
           </p>
@@ -694,7 +732,7 @@
           >
         </div>
 
-        <div class="flex justify-end">
+        <div class="flex justify-center md:justify-end">
           <a
             href=""
             class="text-lg text-[#008060] font-bold [&>i]:ml-1 [&>i]:hover:-translate-y-2 [&>i]:transition-all [&>i]:duration-500"
@@ -708,7 +746,7 @@
       <!-- Footer Nav -top -->
       <div class="text-white font-bold border-b border-[#d2d5d91a] px-10">
         <ul
-          class="flex justify-start gap-6 [&>li>a]:inline-block [&>li>a]:border-b-2 [&>li>a]:border-transparent [&>li>a]:py-4 [&>li>a]:duration-300"
+          class="flex justify-center md:justify-start items-center flex-wrap gap-y-2 gap-x-6 md:gap-6 [&>li>a]:inline-block [&>li>a]:border-b-2 [&>li>a]:border-transparent [&>li>a]:md:py-4 [&>li>a]:duration-300 py-4 md:py-0"
         >
           <li>
             <a class="hover:border-b-2 hover:border-white" href="#">About</a>
@@ -734,8 +772,10 @@
 
       <!-- Footer nav-mid -->
       <div class="py-6 grid grid-cols-2">
-        <div class="grid grid-cols-3 grid-rows-[min-content_auto] px-10">
-          <div class="col-span-3 mb-4 text-white">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 content-start gap-3 grid-rows-[min-content_auto] px-10"
+        >
+          <div class="md:col-span-3 md:mb-4 text-white">
             <h3 class="text-sm font-extrabold">ONLINE STORE</h3>
           </div>
           <ul
@@ -765,7 +805,7 @@
           </ul>
         </div>
 
-        <div class="grid grid-cols-3">
+        <div class="grid grid-col-1 md:grid-cols-3 gap-4 md:gap-0">
           <div>
             <h3 class="text-sm font-extrabold text-white mb-4">
               POINT OF SALE
@@ -836,10 +876,12 @@
 
       <!-- Footer- bottom -->
       <div class="border-b border-[#d2d5d91a]"></div>
-      <div class="flex justify-between items-center px-10">
+      <div
+        class="flex flex-col sm:flex-row justify-between items-center px-10 pt-10 sm:pt-0"
+      >
         <!-- Social icons -->
         <div class="[&>ul>li>a>svg]:h-6">
-          <ul class="flex gap-6 text-3xl text-[#002e25]">
+          <ul class="flex gap-6 text-[#002e25]">
             <li>
               <a href="#"
                 ><svg
