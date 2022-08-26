@@ -20,6 +20,8 @@
 
   - apply animation on button hover through beafore and after psudo class
 
+  - apply grid thorugh tailwind
+
   - learn responsive design with tailwind define screen sizes and and classes
 
 ---
