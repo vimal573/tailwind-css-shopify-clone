@@ -1,4 +1,4 @@
-# Tailwind Assignment Paytm UI Clone
+# Tailwind Assignment Shopify UI Clone
 
 ![ineuro, lco](https://img.shields.io/badge/iNeuron-LCO-green)
 
